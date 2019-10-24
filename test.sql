@@ -1,0 +1,5 @@
+CREATE OR REPLACE FUNCTION fn.GA360_SESSION_ID(fullVisitorId ANY TYPE, secondaryKey ANY TYPE)
+RETURNS STRING
+AS (
+    CONCAT(CAST(fullVisitorId AS STRING), '_', CAST(secondaryKey AS STRING))
+);
